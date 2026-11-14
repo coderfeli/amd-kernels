@@ -44,8 +44,8 @@ Learned from [TokenSpeed kernels](https://github.com/lightseekorg/tokenspeed/blo
 whose PyTorch references are the ground truth their kernels are tested against. One reference function per op, in the
 kernel package's `reference.py`; tests and benchmarks import it and never write their own. Its docstring states what
 "correct" means: where each rounding and quantization happens, the scale layout, the accumulate dtype, and the tolerance
-the tests use (bitwise where the kernel reproduces a served chain bit for bit, otherwise cosine ~1; always
-deterministic). Test shapes come from the served regime, including CUDA graph padding rows.
+the tests use (bit for bit where the kernel matches the reference exactly, otherwise cosine ~1; two runs always match
+bit for bit). Test shapes are the served ones, including the padding rows of CUDA graph batch sizes.
 
 ### 4. Every variant compiles before serving
 

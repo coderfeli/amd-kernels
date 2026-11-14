@@ -20,7 +20,7 @@ it may change without notice: do not depend on it directly. We plan to offer the
 
 ```bash
 pip install --no-deps -e .                            # keeps your torch, AITER and FlyDSL
-source env.sh                                         # ROCm 7.2 SDK, checkout on PYTHONPATH, JIT caches in .cache/
+source env.sh                                         # checkout on PYTHONPATH, JIT caches in .cache/
 python3 -m pytest tests/<category>/<name> -q
 python3 benchmarks/<category>/<name>/<benchmark>.py   # CUDA graph replay over inputs larger than the LLC
 ```

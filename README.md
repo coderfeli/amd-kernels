@@ -29,8 +29,8 @@ python3 benchmarks/<category>/<name>/<benchmark>.py   # CUDA graph replay over i
 
 ### 1. AMD only
 
-Kernels target AMD Instinct GPUs (today MI355X, gfx950). There is no platform-agnostic API or kernel registry; the
-host code picks the variant by shape.
+Kernels target AMD Instinct GPUs (today gfx950: MI355X and MI350X). There is no platform-agnostic API or kernel
+registry; the host code picks the variant by shape.
 
 ### 2. FlyDSL only
 
